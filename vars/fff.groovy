@@ -12,8 +12,8 @@
 def call()
 {
 sh """
-   curl -w '%{http_code}' --request GET 'https://dev.azure.com/vickysastryvs/d2/_apis/git/pullrequests?searchCriteria.status=all&api-version=5.1' \
---header 'Authorization: Basic dmlja3lzYXN0cnkudnNAb3V0bG9vay5jb206MnF4dmNoZWp2bzVzdHNzc3gyZXl5Mmp1azZ3ZHR6bnQ0eWJsb2Fwd2drd2FkdGQ0ZDNkYQ==' -o mani.txt
+   curl -w '%{http_code}' -o mani.txt --request GET 'https://dev.azure.com/vickysastryvs/d2/_apis/git/pullrequests?searchCriteria.status=all&api-version=5.1' \
+--header 'Authorization: Basic dmlja3lzYXN0cnkudnNAb3V0bG9vay5jb206MnF4dmNoZWp2bzVzdHNzc3gyZXl5Mmp1azZ3ZHR6bnQ0eWJsb2Fwd2drd2FkdGQ0ZDNkYQ==' > mani2.txt
  """
  
 }
