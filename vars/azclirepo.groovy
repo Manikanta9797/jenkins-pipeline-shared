@@ -11,7 +11,7 @@ env.name = projectName
 def call(){
   //sh 'az extension add --name azure-devops' 
   //sh 'sudo cat /home/ec2-user/token.txt | az devops login --organization https://dev.azure.com/vickysastryvs/'
- sh 'az login --allow-no-subscriptions'
+ sh 'az login -u vickysastry.vs@outlook.com -p 2qxvchejvo5stsssx2eyy2juk6wdtznt4ybloapwgkwadtd4d3da --allow-no-subscriptions'
   sh 'az repos create --name rrr --organization https://dev.azure.com/vickysastryvs --project d2'
 
 }
